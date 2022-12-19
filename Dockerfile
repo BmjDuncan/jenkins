@@ -10,6 +10,6 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 RUN apt-get update && apt-get install -y docker-ce-cli
 RUN apt-get update && apt-get install -y maven
 RUN apt-get install -y curl gnupg 
-RUN apt-get install google-cloud-sdk -y
+RUN apt-get install -y google-cloud-sdk 
 USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.25.8 docker-workflow:521.v1a_a_dd2073b_2e"
